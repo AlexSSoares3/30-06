@@ -29,6 +29,9 @@
 */
 // >>> sua resposta do DESAFIO 1 <<<
 
+let filmes = ["Matrix", "Coringa", "Duna", "Titanic", "Up"]
+console.log("D1:", filmes[0], "/", filmes[filmes.length - 1]);
+
 
 /* DESAFIO 2
    OBJETIVO: mostrar a frase "Minha lista tem X filmes" (X = quantos).
@@ -37,6 +40,8 @@
        console.log("Tenho " + cores.length + " cores");
 */
 // >>> sua resposta do DESAFIO 2 <<<
+
+console.log("D2: Minha lista tem " + filmes.length + " filmes");
 
 
 /* ===== PARTE B — MODIFICAR O ARRAY ===== */
@@ -53,6 +58,11 @@
 */
 // >>> sua resposta do DESAFIO 3 <<<
 
+let compras = ["pão", "leite"];
+       compras.push("ovos");
+       compras.pop();
+       console.log("D3:", compras);
+
 
 /* DESAFIO 4
    OBJETIVO: no array de compras, trocar a POSIÇÃO 0 por "pão integral".
@@ -62,6 +72,8 @@
        console.log(compras);
 */
 // >>> sua resposta do DESAFIO 4 <<<
+      compras[0] = "pão integral";
+       console.log("D4: ", compras);
 
 
 /* ===== PARTE C — PERCORRER COM for ===== */
@@ -78,6 +90,11 @@
 */
 // >>> sua resposta do DESAFIO 5 <<<
 
+      let turma = ["Ana", "Bruno", "Diego"];
+       for (let i = 0; i < turma.length; i++) {
+         console.log("D5 " + (i + 1) + " - " + turma[i]);
+       }
+
 
 /* DESAFIO 6
    OBJETIVO: dado precos = [10, 25, 8, 42], somar TODOS e mostrar o total.
@@ -92,6 +109,13 @@
        console.log("Soma: " + soma);
 */
 // >>> sua resposta do DESAFIO 6 <<<
+
+       let preco = [10, 25, 8, 42];
+       let total = 0;
+       for (let i = 0; i < preco.length; i++) {
+         total = total + preco[i];
+       }
+       console.log("D6: Total " + total);
 
 
 /* DESAFIO 7
@@ -110,6 +134,13 @@
 */
 // >>> sua resposta do DESAFIO 7 <<<
 
+       let palavras = ["Casas", "Castelo", "Flamengo", "Copa", "Seleção"];
+       let contar = 0;
+       for (let i = 0; i < palavras.length; i++) {
+         if (palavras[i].length > 5) { contar = contar + 1; }
+       }
+       console.log("D7: ", contar);
+
 
 /* ===== PARTE D — PROJETO ===== */
 
@@ -123,6 +154,10 @@
        console.log("Total: " + fila.length);
 */
 // >>> sua resposta do DESAFIO 8 <<<
+
+       let convidados = [];
+       convidados.push("João", "Alex", "Marinaldo", "Iolanda");
+       console.log("D8 Total: " + convidados.length);
 
 
 /* ===== DESAFIOS EXTRAS (★ para quem terminar antes) ===== */
@@ -141,6 +176,13 @@
 */
 // >>> sua resposta do DESAFIO 9 <<<
 
+      let numeros = [7, 2, 19, 5, 11];
+       let maior = numeros[0];
+       for (let i = 1; i < numeros.length; i++) {
+         if (numeros[i] > maior) { maior = numeros[i]; }
+       }
+       console.log("D9 Maior: " + maior);
+
 
 /* DESAFIO 10 ★
    OBJETIVO: dado turma = ["Ana", "Bruno", "Carla"], mostrar os nomes
@@ -154,3 +196,8 @@
        }
 */
 // >>> sua resposta do DESAFIO 10 <<<
+
+      let turmaa = ["Ana", "Bruno", "Carla"];
+       for (let i = turmaa.length - 1; i >= 0; i--) {
+         console.log("D10: ", turmaa[i]);
+       }
